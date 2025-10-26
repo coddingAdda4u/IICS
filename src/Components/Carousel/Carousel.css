@@ -129,18 +129,14 @@
 .carousel-controls button {
   background-color: #CCCCCC;
   border-radius: 50%;
-  background-image: url(arrow.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   transition: all .5s ease;
 }
 .carousel-controls button:hover {
   background-color: #FFFFFF;
-}
-.carousel-controls button:first-child {
-  transform: rotate(180deg);
 }
 
 @media screen and (max-width: 576px) {
@@ -179,4 +175,5 @@
     grid-template-columns: repeat(2, 50px);
   grid-template-rows: repeat(1, 50px);
   }
+
 }
