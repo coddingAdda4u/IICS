@@ -1,0 +1,41 @@
+.testimonials-row {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 1rem;
+    height: auto;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+.testimonials-cards {
+    height: 250px;
+    background: var(--color-background);
+    width: 300px;
+    flex-shrink: 0;
+    padding: 1rem;
+    margin: .8rem auto;
+    border-radius: 1.4rem;
+}
+.testimonial-header {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+.testimonial-header img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.testimonial-header .username{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: -5px;
+}
+.testimonial-header .user-course {
+    font-size: .8rem;
+    font-weight: 400;
+}
+.user-review {
+    font-size: normal;
+}

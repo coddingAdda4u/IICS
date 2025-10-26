@@ -1,0 +1,182 @@
+.carousel {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background-color: #000000;
+}
+
+.carousel-back {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.carousel-back img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  object-fit: cover;
+  filter: brightness(.4);
+}
+.carousel-back img:first-child {
+  left: 0;
+}
+/* Top container */
+.carousel-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  pointer-events: none;
+  background-color: transparent;
+  /* z-index: 1; */
+}
+.carousel-description {
+  position: relative;
+  left: 10vw;
+  top: 10%;
+  height: 70%;
+  width: 60%;
+  color: #FFFFFF;
+}
+.carousel-row {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 1vw;
+}
+.carousel-title {
+  position: absolute;
+  top: 100%;
+  font-size: 4vw;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-shadow: -2px 1px 3px #222222;
+}
+.carousel-title:nth-child(1) {
+  top: 0 ;
+}
+.title {
+  height: 80px;
+}
+.carousel-text {
+  position: absolute;
+  top: 100%;
+  font-size: 1.1rem;
+  font-weight: normal;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  text-shadow: -2px 1px 3px #222222;
+}
+.carousel-text:nth-child(1) {
+  top: 0 ;
+}
+.text {
+  height: 80px;
+  width: 70%;
+}
+.carousel-row:last-child {
+  margin-top: 3vw;
+  /* background: red; */
+}
+.carousel-buttons {
+  position: absolute;
+  top: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 130px);
+  grid-template-rows: 40px;
+  gap: 10px;
+}
+.carousel-buttons:first-child {
+  top: 0 ;
+}
+.carousel-buttons button {
+  border-radius: 9px;
+  font-size: 1.3rem;
+  color: var(--color-background);
+  letter-spacing: 1px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 3px solid var(--color-primary);
+  pointer-events: all;
+}
+.carousel-buttons button:first-child {
+  background-color: var(--color-primary);
+}
+.carousel button:last-child {
+  backdrop-filter: blur(20px);
+  color: var(--color-background);
+}
+.buttons {
+  height: 50px;
+}
+.carousel-controls {
+  position: absolute;
+  bottom: 80px;
+  left: 45%;
+  z-index: 4;
+  display: grid;
+  grid-template-columns: repeat(2, 40px);
+  grid-template-rows: repeat(1, 40px);
+  gap: 3rem;
+}
+.carousel-controls button {
+  background-color: #CCCCCC;
+  border-radius: 50%;
+  background-image: url(arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  transition: all .5s ease;
+}
+.carousel-controls button:hover {
+  background-color: #FFFFFF;
+}
+.carousel-controls button:first-child {
+  transform: rotate(180deg);
+}
+
+@media screen and (max-width: 576px) {
+  .carousel-description {
+    width: 100%;
+    left: 0;
+    top: 4%;
+    padding-left: 1rem;
+  }
+  .title {
+    height: 50px;
+  }
+  .carousel-title {
+    font-size: 8.5vw;
+  }
+  .text {
+    height: 110px;
+    width: 100%;
+  }
+  .buttons {
+    margin-top: 60px !important;
+  }
+  .carousel-buttons button {
+    font-size: 1.2rem;
+  }
+  .carousel-buttons {
+    grid-template-columns: repeat(2, 140px);
+    grid-template-rows: repeat(1, 40px);
+  }
+  .carousel-controls {
+    bottom: 25%;
+    width: 100%;
+    left: 0;
+    justify-content: center;
+    gap: 3rem;
+    grid-template-columns: repeat(2, 50px);
+  grid-template-rows: repeat(1, 50px);
+  }
+}
