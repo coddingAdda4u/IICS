@@ -2,6 +2,8 @@ import { useRef, useState, useEffect, useCallback } from 'react'
 import './Carousel.css'
 import carouselItemsData from './CarouselData/carouselData'
 import gsap from 'gsap'
+import { FaAngleLeft, FaAngleRight } from 'react-icons/fa6'
+
 
 
 function Carousel() {
@@ -154,9 +156,13 @@ function Carousel() {
           </div>
         </div>
       </div>
-      <div className="carousel-controls">
-        <button onClick={handlePrev}></button>
-        <button onClick={handleNext}></button>
+     <div className="carousel-controls">
+        <button onClick={handlePrev}>
+          <FaAngleLeft className='text-black text-2xl' />
+        </button>
+        <button onClick={handleNext}>
+          <FaAngleRight className='text-black text-2xl' />
+        </button>
       </div>
     </div>
   )
@@ -180,4 +186,5 @@ function CarouselButtons() {
       <button>Read More</button>
     </div>
   )
+
 }
